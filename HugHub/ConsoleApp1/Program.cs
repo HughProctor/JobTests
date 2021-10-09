@@ -15,7 +15,7 @@ namespace ConsoleApp1
 
             var request = new PriceRequest()
             {
-                RiskData = new RiskDataModel() //hardcoded here, but would normally be from user input above
+                RiskData = new RiskDataModel()
                 {
                     DOB = DateTime.Parse("1980-01-01"),
                     FirstName = "John",
