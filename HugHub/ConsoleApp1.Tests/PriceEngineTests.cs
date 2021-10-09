@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ConsoleApp1.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace ConsoleApp1.Tests
@@ -11,7 +12,7 @@ namespace ConsoleApp1.Tests
         {
             var request = new PriceRequest()
             {
-                RiskData = new RiskData() //hardcoded here, but would normally be from user input above
+                RiskData = new RiskDataModel() //hardcoded here, but would normally be from user input above
                 {
                     DOB = DateTime.Parse("1980-01-01"),
                     FirstName = "John",
@@ -28,6 +29,9 @@ namespace ConsoleApp1.Tests
             var priceEngine = new PriceEngine();
             var price = priceEngine.GetPrice(request, out tax, out insurer, out error);
 
+
+            Assert.IsNotNull(price, "Price is null");
+            Assert.IsTrue(price > 0, "Price returned an error" + error);
         }
     }
 }

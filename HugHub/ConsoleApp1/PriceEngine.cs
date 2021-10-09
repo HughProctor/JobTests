@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Models;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
@@ -9,17 +10,9 @@ namespace ConsoleApp1
 {
     public class PriceRequest
     {
-        public RiskData RiskData;
+        public RiskDataModel RiskData;
     }
 
-    public class RiskData
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public decimal Value { get; set; }
-        public string Make { get; set; }
-        public DateTime? DOB { get; set; }
-    }
 
     public class QuotationSystem1
     {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace ConsoleApp1
 
             var request = new PriceRequest()
             {
-                RiskData = new RiskData() //hardcoded here, but would normally be from user input above
+                RiskData = new RiskDataModel() //hardcoded here, but would normally be from user input above
                 {
                     DOB = DateTime.Parse("1980-01-01"),
                     FirstName = "John",
