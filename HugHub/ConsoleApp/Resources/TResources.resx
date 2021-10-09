@@ -120,4 +120,7 @@
   <data name="Controller_NullRequestBody" xml:space="preserve">
     <value>The HTTP request did not include a valid entity body. Please ensure there is an entity.</value>
   </data>
+  <data name="Error_RiskDataModel_FirstName" xml:space="preserve">
+    <value />
+  </data>
 </root>

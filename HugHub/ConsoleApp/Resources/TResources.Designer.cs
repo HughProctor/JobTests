@@ -68,5 +68,14 @@ namespace ConsoleApp.Resources {
                 return ResourceManager.GetString("Controller_NullRequestBody", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Error_RiskDataModel_FirstName {
+            get {
+                return ResourceManager.GetString("Error_RiskDataModel_FirstName", resourceCulture);
+            }
+        }
     }
 }
