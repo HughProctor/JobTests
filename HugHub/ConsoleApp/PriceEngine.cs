@@ -84,6 +84,7 @@ namespace ConsoleApp1
             //initialise return variables
             tax = 0;
             insurerName = "";
+            decimal price = 0;
             errorMessage = "";
 
             //validation
@@ -114,7 +115,6 @@ namespace ConsoleApp1
 
 
             //now call 3 external system and get the best price
-            decimal price = 0;
 
             //system 1 requires DOB to be specified
             if (request.RiskData.DOB != null)

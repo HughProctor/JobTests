@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp1.Tests
 {
     [TestClass]
-    public class PriceEngineTests
+    public class T1_PriceEngine_ModelValid_Tests
     {
         [TestMethod]
         public void T1_First_Refactor_Test()

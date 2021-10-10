@@ -34,7 +34,7 @@ namespace ConsoleApp.Controllers
             }
             catch (Exception ex1)
             {
-                return null; // InternalServerError(ex1);
+                return BadRequest(ex1);
                 // log a error in trace writer.. handle in Elmah or Logger - this.traceWriter.Error
                 //throw new HttpResponseException(Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex1));
             }
