@@ -28,16 +28,17 @@ namespace ConsoleApp1
                 }
             };
             var service = new PriceEngineService();
-            var bestQuote = await service.GetBestPrice(request.RiskData);
 
-            //if (bestQuote  == -1)
-            //{
-            //    Console.WriteLine(String.Format("There was an error - {0}", error));
-            //}
-            //else
-            //{
+            try
+            {
+                var bestQuote = await service.GetBestPrice(request.RiskData);
                 Console.WriteLine(String.Format("You price is {0}, from insurer: {1}. This includes tax of {2}", bestQuote.Price, bestQuote.Name, bestQuote.Tax));
-            //}
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(String.Format("There was an error - {0}", error.Message));
+            }
+
 
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
