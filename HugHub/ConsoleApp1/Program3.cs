@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class Program2
+    class Program3
     {
         static readonly HttpClient s_client = new HttpClient
         {
