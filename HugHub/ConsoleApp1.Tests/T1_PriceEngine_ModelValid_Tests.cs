@@ -42,30 +42,30 @@ namespace ConsoleApp.Tests
         //    Assert.IsTrue(price > 0, "Price returned an error" + error);
         //}
 
-        [TestMethod]
-        public async Task T2_Refactor_Split_GetPriceModelAsync()
-        {
-            // Mock the PriceService to test model basic validation errors
-            decimal resultPrice = 1;
-            var priceServiceMoc = Substitute.For<IPriceService>();
-            priceServiceMoc.GetBestQuote().Returns(Task.FromResult(resultPrice));
+        //[TestMethod]
+        //public async Task T2_Refactor_Split_GetPriceModelAsync()
+        //{
+        //    // Mock the PriceService to test model basic validation errors
+        //    decimal resultPrice = 1;
+        //    var priceServiceMoc = Substitute.For<IPriceService>();
+        //    priceServiceMoc.GetBestQuote().Returns(Task.FromResult(resultPrice));
 
-            var riskData = new RiskDataModel() 
-            {
-                DOB = DateTime.Parse("1980-01-01"),
-                FirstName = "John",
-                LastName = "Smith",
-                Make = "Cool New Phone",
-                Value = 500
-            };
+        //    var riskData = new RiskDataModel() 
+        //    {
+        //        DOB = DateTime.Parse("1980-01-01"),
+        //        FirstName = "John",
+        //        LastName = "Smith",
+        //        Make = "Cool New Phone",
+        //        Value = 500
+        //    };
 
-            var priceController = new PriceController(priceServiceMoc);
+        //    var priceController = new PriceController(priceServiceMoc);
 
-            var response = await priceController.GetPriceAsync(riskData);
+        //    var response = await priceController.GetPriceAsync(riskData);
 
-            Assert.IsInstanceOfType(response, typeof(OkObjectResult), "Response was not of correct type");
-            Assert.AreEqual((response as OkObjectResult).Value, resultPrice, string.Format("Request did not return exepected value - Expected:{0} Actual: {1}", resultPrice, response));
-        }
+        //    Assert.IsInstanceOfType(response, typeof(OkObjectResult), "Response was not of correct type");
+        //    Assert.AreEqual((response as OkObjectResult).Value, resultPrice, string.Format("Request did not return exepected value - Expected:{0} Actual: {1}", resultPrice, response));
+        //}
 
         [TestMethod]
         public async Task T3_GetPrice_BadRequest_NullModel()
