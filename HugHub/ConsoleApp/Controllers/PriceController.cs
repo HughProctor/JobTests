@@ -1,6 +1,6 @@
 ﻿using ConsoleApp._BusinessLogic;
 using ConsoleApp.Resources;
-using ConsoleApp1.Models;
+using ConsoleApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -29,7 +29,8 @@ namespace ConsoleApp.Controllers
 
             try
             {
-                var result = await _priceService.GetBestQuote();
+                //var result = await _priceService.GetBestQuote();
+                var result = await _priceService.GetBestInsurereQuote();
                 return Ok(result);
             }
             catch (Exception ex1)

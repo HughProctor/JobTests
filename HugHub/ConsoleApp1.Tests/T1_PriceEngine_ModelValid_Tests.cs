@@ -1,6 +1,6 @@
 ﻿using ConsoleApp._BusinessLogic;
 using ConsoleApp.Controllers;
-using ConsoleApp1.Models;
+using ConsoleApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NSubstitute;
@@ -10,37 +10,37 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Tests
+namespace ConsoleApp.Tests
 {
     [TestClass]
     public class T1_PriceEngine_ModelValid_Tests
     {
-        [TestMethod]
-        public void T1_First_Refactor_Test()
-        {
-            var request = new PriceRequest()
-            {
-                RiskData = new RiskDataModel() //hardcoded here, but would normally be from user input above
-                {
-                    DOB = DateTime.Parse("1980-01-01"),
-                    FirstName = "John",
-                    LastName = "Smith",
-                    Make = "Cool New Phone",
-                    Value = 500
-                }
-            };
+        //[TestMethod]
+        //public void T1_First_Refactor_Test()
+        //{
+        //    var request = new PriceRequest()
+        //    {
+        //        RiskData = new RiskDataModel() //hardcoded here, but would normally be from user input above
+        //        {
+        //            DOB = DateTime.Parse("1980-01-01"),
+        //            FirstName = "John",
+        //            LastName = "Smith",
+        //            Make = "Cool New Phone",
+        //            Value = 500
+        //        }
+        //    };
 
-            decimal tax = 0;
-            string insurer = "";
-            string error = "";
+        //    decimal tax = 0;
+        //    string insurer = "";
+        //    string error = "";
 
-            var priceEngine = new PriceEngine();
-            var price = priceEngine.GetPrice(request, out tax, out insurer, out error);
+        //    var priceEngine = new PriceEngine();
+        //    var price = priceEngine.GetPrice(request, out tax, out insurer, out error);
 
 
-            Assert.IsNotNull(price, "Price is null");
-            Assert.IsTrue(price > 0, "Price returned an error" + error);
-        }
+        //    Assert.IsNotNull(price, "Price is null");
+        //    Assert.IsTrue(price > 0, "Price returned an error" + error);
+        //}
 
         [TestMethod]
         public async Task T2_Refactor_Split_GetPriceModelAsync()

@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp
 {
     class Program2
     {

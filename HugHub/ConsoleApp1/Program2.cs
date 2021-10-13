@@ -1,4 +1,4 @@
-﻿using ConsoleApp1.Models;
+﻿using ConsoleApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApp
 {
     class Program4
     {

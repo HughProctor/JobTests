@@ -1,4 +1,4 @@
-﻿using ConsoleApp1.Tests.TestMethods;
+﻿using ConsoleApp.Tests.TestMethods;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1.Tests
+namespace ConsoleApp.Tests
 {
     [TestClass]
     public class T2_ParallelTask_Tests

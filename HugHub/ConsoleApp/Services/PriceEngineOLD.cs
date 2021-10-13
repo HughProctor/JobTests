@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp.Tests.TestMethods
+namespace ConsoleApp._BusinessLogic
 {
-    public class ParallelTasks
+    internal class PriceService : IPriceService
     {
+        Task<decimal> IPriceService.GetBestQuote()
+        {
+            throw new NotImplementedException();
+        }
+
         static readonly HttpClient s_client = new HttpClient
         {
             MaxResponseContentBufferSize = 1_000_000
@@ -39,9 +43,7 @@ namespace ConsoleApp.Tests.TestMethods
                 "https://docs.microsoft.com/xamarin"
         };
 
-        //static Task Main() => SumPageSizesAsync();
-
-        public async Task<InsurerQuoteModel> SumPageSizesAsync()
+        public async Task<InsurerQuoteModel> GetBestInsurereQuote()
         {
             var stopwatch = Stopwatch.StartNew();
 
@@ -121,10 +123,6 @@ namespace ConsoleApp.Tests.TestMethods
                 Tax = 0.2M,
             };
             returnModel.PriceTotal = returnModel.Price + (returnModel.Price * returnModel.Tax);
-
-            Console.WriteLine(
-                string.Format("Insurer: |{0,60}| Price: |{1,10}| Tax: |{2,10}| Total: |{3,10}|", returnModel.Url, returnModel.Price, returnModel.Tax, returnModel.PriceTotal));
-
             return returnModel;
         }
     }

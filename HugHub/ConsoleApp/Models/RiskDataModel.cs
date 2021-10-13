@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ConsoleApp1.Models
+namespace ConsoleApp.Models
 {
     public class RiskDataModel
     {

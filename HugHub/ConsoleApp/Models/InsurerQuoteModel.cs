@@ -2,7 +2,7 @@
 
 namespace ConsoleApp.Models
 {
-    public class InsurerQuoteModel
+    public class InsurerQuoteModel : BaseModel
     {
         public string Name { get; set; }
         public string Url { get; set; }
